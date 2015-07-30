@@ -25,7 +25,7 @@ public class Conexion {
             DataSource ds = (DataSource) initCtx.lookup("jdbc/MyLocalDB");
             con = ds.getConnection();
         } catch (Exception ex){
-            System.out.println("Prueba  ");
+            System.out.println("Prueba ");
         }
         return con;
     }
