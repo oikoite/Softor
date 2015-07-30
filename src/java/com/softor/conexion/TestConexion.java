@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package softor.py.com.conexion;
+package com.softor.conexion;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
