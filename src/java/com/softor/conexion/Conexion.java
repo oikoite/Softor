@@ -16,7 +16,7 @@ import javax.sql.DataSource;
  */
 public class Conexion {
     private Context ctx = null;
-    Connection con = null;
+    private Connection con = null;
     
     public Connection getConexion(){
         try{

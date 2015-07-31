@@ -5,6 +5,7 @@
  */
 package com.softor.impl;
 
+import com.softor.conexion.Conexion;
 import com.softor.dao.PersonaDAO;
 import com.softor.entities.Persona;
 import java.util.List;
@@ -15,6 +16,8 @@ import java.util.List;
  */
 public class PersonaImpl implements PersonaDAO{
 
+    private Conexion con = new Conexion();
+    
     @Override
     public Persona add(Persona entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
