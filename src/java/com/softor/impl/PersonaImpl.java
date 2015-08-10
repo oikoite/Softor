@@ -8,19 +8,28 @@ package com.softor.impl;
 import com.softor.conexion.Conexion;
 import com.softor.dao.PersonaDAO;
 import com.softor.entities.Persona;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.List;
 
 /**
  *
  * @author ci_vbaez
  */
-public class PersonaImpl implements PersonaDAO{
+public class PersonaImpl implements PersonaDAO {
 
-    private Conexion con = new Conexion();
-    
+    private final Conexion con = new Conexion();
+    private Statement stmt = null;
+    private ResultSet rs = null;
+        
     @Override
     public Persona add(Persona entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try{
+            stmt = con.getConexion().prepareStatement("INSERT INTO persona VALUES (?,?,?,?,?)");
+        } catch (Exception ex){
+            
+        }
+        return null;
     }
 
     @Override
@@ -42,5 +51,5 @@ public class PersonaImpl implements PersonaDAO{
     public List<Persona> getAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
