@@ -12,8 +12,13 @@ import java.io.Serializable;
  * @author ci_vbaez
  */
 public class Persona implements Serializable{
+    
+    private int id;
     private String nombre;
 
+    public Persona() {
+    }
+    
     public Persona(String nombre) {
         this.nombre = nombre;
     }
@@ -25,5 +30,12 @@ public class Persona implements Serializable{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
